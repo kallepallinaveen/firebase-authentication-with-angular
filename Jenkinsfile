@@ -5,9 +5,8 @@ pipeline{
     stages{
         stage("Build a code"){
             steps{
-                script{
-                    sh "ng build"
-                }
+                nodejs(nodeJSInstallationName: 'NodeJs 12.22.9') {
+                    sh "npm install"
             }
         }
     }
