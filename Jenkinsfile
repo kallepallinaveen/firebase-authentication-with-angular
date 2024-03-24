@@ -5,14 +5,14 @@ pipeline{
     stages{
         stage("Build a code"){
             steps{
-                nodejs(nodeJSInstallationName: 'NodeJs 18.13.0') {
+                nodejs(nodeJSInstallationName: 'NodeJs 6.13.1') {
                  sh "npm install"
                 }
             }
         }
         stage("run a code"){
             steps{
-                nodejs(nodeJSInstallationName: 'NodeJs 18.13.0') {
+                nodejs(nodeJSInstallationName: 'NodeJs 6.13.1') {
                  sh "npm run build"
                 }
             }
