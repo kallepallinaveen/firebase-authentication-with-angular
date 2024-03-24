@@ -13,7 +13,7 @@ pipeline{
         stage("run a code"){
             steps{
                 nodejs(nodeJSInstallationName: 'NodeJs 6.13.1') {
-                 sh "npm run build"
+                 sh "ng build"
                 }
             }
         }
